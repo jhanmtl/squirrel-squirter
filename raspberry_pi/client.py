@@ -25,7 +25,7 @@ while True:
     info=data_cap.read()
     img=img_cap.read()
     if info!='pass':
-        fps,delta_x,delta_y,label=utils.draw(info,img)
+        utils.draw(info,img)
     cv2.imshow('',img)
 
     if cv2.waitKey(1)==ord('q'):
