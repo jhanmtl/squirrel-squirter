@@ -17,7 +17,7 @@ args=ap.parse_args()
 data_url=args.data
 img_url=args.img
 
-data_cap=utils.frameInfoGrabber(data_url).start()
+data_cap=utils.predictionGrabber(data_url).start()
 img_cap=utils.frameGrabber(img_url).start()
 time.sleep(5)
 
