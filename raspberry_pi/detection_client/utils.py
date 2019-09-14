@@ -19,9 +19,9 @@ def draw(info,img):
         label=data[4]
         score=float(data[5])
         fps=float(data[6])
-         
-        cv2.rectangle(img, (int(x1), int(y1)), (int(x2), int(y2)), (0,255,0), 1)
-        cv2.putText(img,label+': '+str(round(100*score,4))+'%', (int(x1),int(y2-5)),cv2.FONT_HERSHEY_SIMPLEX, 0.5,(0,255,0),1)
+        if label=='person':
+            cv2.rectangle(img, (int(x1), int(y1)), (int(x2), int(y2)), (0,255,0), 1)
+            cv2.putText(img,label+': '+str(round(100*score,4))+'%', (int(x1),int(y2-5)),cv2.FONT_HERSHEY_SIMPLEX, 0.5,(0,255,0),1)
 
 class frameGrabber:
     
